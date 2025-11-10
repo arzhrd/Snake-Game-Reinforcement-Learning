@@ -54,3 +54,10 @@ class SnakeGameAI:
         if self.food in self.snake:
             self._place_food()
 
+    def play_step(self, action):
+        self.frame_iteration += 1
+        # 1. collect user input
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
